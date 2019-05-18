@@ -1,8 +1,31 @@
-swiper {
+.banner {
   height: 425rpx;
   width: 100%;
 }
-.swiperImage {
+.bannerImage {
   height: 425rpx;
   width: 100%;
+}
+.navBox {
+  height: 95rpx;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.nav {
+  height: 95rpx;
+  width: 18%;
+  font-size: 33rpx;
+  text-align: center;
+  display: inline-block;
+  background: #eee;
+}
+.nav.active {
+  background: #da4a20;
+  color:#fff;
+}
+.navText {
+  height: 95rpx;
+  width: 20%;
+  line-height: 95rpx;
 }
