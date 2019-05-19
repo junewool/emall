@@ -13,12 +13,21 @@ Page({
     nav: [],
     scrollX: true,
     currentNav: "",
-    toNav: ""
+    toNav: "",
+    distanceX: 0,
+    goods: []
   }, 
   tapNav: function(e) {
-    console.log(e)
+    var width = wx.getSystemInfoSync().windowWidth
+    var size = this.data.nav.length
+    var index = e.currentTarget.dataset.index -2
+    var disx = (index)*width /size
     this.setData({
-      currentNav: e.currentTarget.id
+      currentNav: e.currentTarget.id,
+      distanceX: disx,
+      goods: [
+        { id: disx, name: "蜂蜜", image: "http://k.sinaimg.cn/n/sports/transform/20160305/GTwE-fxqafhk7443442.jpg/w5709a2.jpg", price: 12 }
+      ]
     })
   },
   onLoad: function () {
@@ -38,7 +47,18 @@ Page({
         {id: "others", name: "其他"}
       ],
       currentNav: "all",
-      toNav: "all"
+      toNav: "makeup",
+      goods: [
+        { id: 1, name: "蜂蜜", image: "http://k.sinaimg.cn/n/sports/transform/20160305/GTwE-fxqafhk7443442.jpg/w5709a2.jpg", price: 11},
+        { id: 2, name: "茶叶", image: "http://img1.cache.netease.com/news/2016/9/26/201609260027512b2d1.png", price: 12},
+        { id: 3, name: "鸡蛋", image: "http://k.sinaimg.cn/n/sports/transform/20160305/GTwE-fxqafhk7443442.jpg/w5709a2.jpg", price: 23},
+        { id: 4, name: "蕨菜", image: "http://img1.cache.netease.com/news/2016/9/26/201609260027512b2d1.png", price: 14},
+        { id: 5, name: "番薯", image: "http://k.sinaimg.cn/n/sports/transform/20160305/GTwE-fxqafhk7443442.jpg/w5709a2.jpg", price: 15},
+        { id: 6, name: "豌豆", image: "http://img1.cache.netease.com/news/2016/9/26/201609260027512b2d1.png", price: 16},
+        { id: 7, name: "豆腐", image: "http://k.sinaimg.cn/n/sports/transform/20160305/GTwE-fxqafhk7443442.jpg/w5709a2.jpg", price: 17},
+        { id: 8, name: "芹菜", image: "http://img1.cache.netease.com/news/2016/9/26/201609260027512b2d1.png", price: 18},
+        { id: 9, name: "甲鱼", image: "http://k.sinaimg.cn/n/sports/transform/20160305/GTwE-fxqafhk7443442.jpg/w5709a2.jpg", price: 19}
+      ]
     })
   }
 })

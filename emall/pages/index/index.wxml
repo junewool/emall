@@ -17,10 +17,22 @@
   <!-- nav -->
   <scroll-view 
   scroll-x="{{scrollX}}" 
+  scroll-left='{{distanceX}}'
   class='navBox'
   >
-    <view wx:for="{{nav}}" wx:key="id" class='nav {{currentNav == item.id ? "active": ""}}' id='{{item.id}}' bindtap='tapNav'>
+    <view wx:for="{{nav}}" wx:key="id" 
+    class='nav {{currentNav == item.id ? "active": ""}}' 
+    id='{{item.id}}' 
+    bindtap='tapNav' 
+    data-index='{{index}}'
+    >
       <text class='navText'>{{item.name}}</text>
     </view>
   </scroll-view>
+  <view class='goods'>
+    <view wx:for="{{goods}}" wx:key="id" class='item'>
+      <image src="{{item.image}}" class='itemImage'></image>
+      <text class='itemText'>{{item.name}},{{item.price}}</text>
+    </view>
+  </view>
 </view>
