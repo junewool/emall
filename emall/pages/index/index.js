@@ -24,10 +24,7 @@ Page({
     var disx = (index)*width /size
     this.setData({
       currentNav: e.currentTarget.id,
-      distanceX: disx,
-      goods: [
-        { id: disx, name: "蜂蜜", image: "http://k.sinaimg.cn/n/sports/transform/20160305/GTwE-fxqafhk7443442.jpg/w5709a2.jpg", price: 12 }
-      ]
+      distanceX: disx
     })
   },
   onLoad: function () {
