@@ -29,10 +29,38 @@
       <text class='navText'>{{item.name}}</text>
     </view>
   </scroll-view>
-  <view class='goods'>
+  <!-- <view class='goods'>
     <view wx:for="{{goods}}" wx:key="id" class='item'>
       <image src="{{item.image}}" class='itemImage'></image>
       <text class='itemText'>{{item.name}},{{item.price}}</text>
     </view>
+  </view> -->
+  <view class='goods'>
+    <view class='item'>
+      <view class='itemDetail'></view>
+    </view>
+    <view class='item'>
+      <view class='itemDetail'></view>
+    </view>
+    <view class='item'>
+      <view class='itemDetail'></view>
+    </view>
+    <view class='item'>
+      <view class='itemDetail'></view>
+    </view>
+    <view class='item'>
+      <view class='itemDetail'></view>
+    </view>
   </view>
 </view>
+<!-- <view class="weui-footer">
+<view class="weui-footer__links">
+    <navigator url="" class="weui-footer__link">上海物联网科技有限公司</navigator>
+</view>
+<view class="weui-footer__text">Copyright © 程序媛专用</view>
+</view>
+<view class="weui-flex">
+            <view class="weui-flex__item"><view class="placeholder">weui</view></view>
+            <view class="weui-flex__item"><view class="placeholder">weui</view></view>
+            <view class="weui-flex__item"><view class="placeholder">weui</view></view>
+        </view> -->
